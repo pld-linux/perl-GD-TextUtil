@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	GD-TextUtil perl module
-Summary(pl):	Modu³ perla GD-TextUtil
+Summary:	GD::TextUtil perl module
+Summary(pl):	Modu³ perla GD::TextUtil
 Name:		perl-GD-TextUtil
 Version:	0.82
 Release:	2
@@ -14,10 +14,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GD-TextUtil perl module.
+GD::TextUtil perl module.
 
 %description -l pl
-Modu³ perla GD-TextUtil.
+Modu³ perla GD::TextUtil.
 
 %prep
 %setup -q -n GDTextUtil-%{version}
