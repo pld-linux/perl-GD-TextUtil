@@ -1,26 +1,30 @@
 %include	/usr/lib/rpm/macros.perl
+%define	pdir	GD
+%define	pnam	TextUtil
 Summary:	GD::TextUtil perl module
 Summary(pl):	Modu³ perla GD::TextUtil
 Name:		perl-GD-TextUtil
 Version:	0.82
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/GD/GDTextUtil-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-GD
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GD::TextUtil perl module.
+GD::TextUtil perl module - Text utilities for use with the GD drawing
+package.
 
 %description -l pl
-Modu³ perla GD::TextUtil.
+Modu³ perla GD::TextUtil - narzêdzia do obróbki tekstu przeznaczone do
+u¿ywania z pakietem rysuj±cym GD.
 
 %prep
-%setup -q -n GDTextUtil-%{version}
+%setup -q -n %{pdir}%{pnam}-%{version}
 
 %build
 perl Makefile.PL
@@ -34,14 +38,13 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install demo/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
+%dir %{perl_sitelib}/GD
 %{perl_sitelib}/GD/Text.pm
 %{perl_sitelib}/GD/Text
 %{_mandir}/man3/*
