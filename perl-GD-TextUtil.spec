@@ -29,7 +29,7 @@ u¿ywania z pakietem rysuj±cym GD.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
