@@ -4,7 +4,7 @@
 Summary:	GD::TextUtil perl module
 Summary(pl):	Modu³ perla GD::TextUtil
 Name:		perl-GD-TextUtil
-Version:	0.84
+Version:	0.85
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
