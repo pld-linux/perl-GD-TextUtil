@@ -28,7 +28,7 @@ This module provides a font-independent way of dealing with text in
 GD, for use with the GD::Text::* modules and GD::Graph.
 
 %description -l pl
-Modu³ ten udostêpnia niezale¿ne od funtu narzêdzia do obróbki tekstu
+Modu³ ten udostêpnia niezale¿ne od fontu narzêdzia do obróbki tekstu
 w GD. Do u¿ytku z modu³ami GD::Text::* i GD::Graph.
 
 %prep
