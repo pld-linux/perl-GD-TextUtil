@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	GD
-%define	pnam	TextUtil
+%define		pdir	GD
+%define		pnam	TextUtil
 Summary:	GD::Text - text utilities for use with GD
 Summary(pl):	GD::Text - narzêdzia do obróbki tekstu do u¿ycia z GD
 Name:		perl-GD-TextUtil
