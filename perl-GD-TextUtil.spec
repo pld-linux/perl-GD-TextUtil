@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	GD
 %define	pnam	TextUtil
@@ -36,14 +40,17 @@ w GD. Do u¿ytku z modu³ami GD::Text::* i GD::Graph.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_fontsdir}/TTF}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install demo/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-install *.ttf $RPM_BUILD_ROOT%%{_fontsdir}/TTF
+install *.ttf $RPM_BUILD_ROOT%{_fontsdir}/TTF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
