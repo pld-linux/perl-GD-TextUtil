@@ -4,12 +4,12 @@
 Summary:	GD::TextUtil perl module
 Summary(pl):	Modu³ perla GD::TextUtil
 Name:		perl-GD-TextUtil
-Version:	0.85
-Release:	2
+Version:	0.86
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
-# Source0-md5:	b86a79ff37a19646901621b3b702b451
+# Source0-md5:	941ad06eadc86b47f3a32da405665c41
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-GD
 BuildRequires:	rpm-perlprov >= 4.1-13
