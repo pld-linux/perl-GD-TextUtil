@@ -6,7 +6,7 @@
 %define		pdir	GD
 %define		pnam	TextUtil
 Summary:	GD::Text - text utilities for use with GD
-Summary(pl):	GD::Text - narzêdzia do obróbki tekstu do u¿ycia z GD
+Summary(pl.UTF-8):   GD::Text - narzÄ™dzia do obrÃ³bki tekstu do uÅ¼ycia z GD
 Name:		perl-GD-TextUtil
 Version:	0.86
 Release:	2
@@ -28,9 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This module provides a font-independent way of dealing with text in
 GD, for use with the GD::Text::* modules and GD::Graph.
 
-%description -l pl
-Modu³ ten udostêpnia niezale¿ne od fontu narzêdzia do obróbki tekstu
-w GD. Do u¿ytku z modu³ami GD::Text::* i GD::Graph.
+%description -l pl.UTF-8
+ModuÅ‚ ten udostÄ™pnia niezaleÅ¼ne od fontu narzÄ™dzia do obrÃ³bki tekstu
+w GD. Do uÅ¼ytku z moduÅ‚ami GD::Text::* i GD::Graph.
 
 %prep
 %setup -q -n %{pdir}%{pnam}-%{version}
