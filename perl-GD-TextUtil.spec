@@ -6,7 +6,7 @@
 %define		pdir	GD
 %define		pnam	TextUtil
 Summary:	GD::Text - text utilities for use with GD
-Summary(pl.UTF-8):   GD::Text - narzędzia do obróbki tekstu do użycia z GD
+Summary(pl.UTF-8):	GD::Text - narzędzia do obróbki tekstu do użycia z GD
 Name:		perl-GD-TextUtil
 Version:	0.86
 Release:	2
