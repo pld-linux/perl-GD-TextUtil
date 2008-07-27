@@ -9,7 +9,7 @@ Summary:	GD::Text - text utilities for use with GD
 Summary(pl.UTF-8):	GD::Text - narzędzia do obróbki tekstu do użycia z GD
 Name:		perl-GD-TextUtil
 Version:	0.86
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
