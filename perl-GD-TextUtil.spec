@@ -1,10 +1,13 @@
-#
+# TODO
+# - fonts-TTF-Dustismo_Sans package:
+#   /usr/share/fonts/TTF/Dustismo_Sans.ttf
+
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	GD
 %define		pnam	TextUtil
+%include	/usr/lib/rpm/macros.perl
 Summary:	GD::Text - text utilities for use with GD
 Summary(pl.UTF-8):	GD::Text - narzędzia do obróbki tekstu do użycia z GD
 Name:		perl-GD-TextUtil
@@ -46,12 +49,11 @@ w GD. Do użytku z modułami GD::Text::* i GD::Graph.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name}-%{version},%{_fontsdir}/TTF}
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install demo/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-install *.ttf $RPM_BUILD_ROOT%{_fontsdir}/TTF
+cp -p demo/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p *.ttf $RPM_BUILD_ROOT%{_fontsdir}/TTF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
