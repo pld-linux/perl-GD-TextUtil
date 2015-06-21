@@ -16,7 +16,7 @@ Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/GD/%{pdir}%{pnam}-%{version}.tar.gz
 # Source0-md5:	941ad06eadc86b47f3a32da405665c41
 Patch0:		%{name}-defaultttfdir.patch
 URL:		http://search.cpan.org/dist/GDTextUtil/
@@ -69,6 +69,6 @@ fontpostinst TTF
 %doc Changes README
 %{perl_vendorlib}/GD/Text.pm
 %{perl_vendorlib}/GD/Text
-%{_mandir}/man3/*
+%{_mandir}/man3/GD::Text*.3pm*
 %{_examplesdir}/%{name}-%{version}
-%{_fontsdir}/TTF/*
+%{_fontsdir}/TTF/Dustismo_Sans.ttf
